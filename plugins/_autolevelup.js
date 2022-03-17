@@ -46,7 +46,7 @@ ${teks}
           '-fill',
           '#0F3E6A',
           '-size',
-          '1024x784',
+          '1025x784',
           '-pointsize',
           '68',
           '-interline-spacing',
