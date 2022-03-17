@@ -12,9 +12,9 @@ let handler = async (m, { conn }) => {
   let mime = (q.msg || q).mimetype || ''
   if (/image|video/.test(mime)) {
     let img = await q.download()
-    if (!img) throw 'Foto/Sticker tidak ditemukan'
+    if (!img) throw 'Foto/Sticker gak ketok/ditemukan'
     conn.sendMessage(m.chat, {degreesLatitude: 25.21465, degreesLongitude: 49.33476, jpegThumbnail: img, Image: img, caption: "DZX NGEBUG:V"}, MessageType.location)
-  } else m.reply('Tag foto/videonya!!')
+  } else m.reply('Tag woy foto/videonya!!')
 }
 
 handler.help = ['jadilokasi']
