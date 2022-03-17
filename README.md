@@ -23,7 +23,7 @@
 |--------|--------|
 | **FFMPEG** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
 | **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
-
+  **heroku.js**  | [here] heroku/node.js
 ### FOR TERMUX USER
 ```bash
 pkg update && pkg upgrade
@@ -208,7 +208,7 @@ use this [branch](https://github.com/BochilGaming/games-wabot/tree/multi-device)
 
 [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
 [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
-
+[![verdibotz1][https://github.com/VERDIBOTZ1.png?size=100)](http://github.com/VERDIBOTZ1) [PEMBARUAN FITUR]
 #### Contributor
 [![idhamthoriqbot](https://github.com/idhamthoriqbot.png?size=100)](https://github.com/idhamthoriqbot)
 [![Adiixyz](https://github.com/Adiixyz.png?size=100)](https://github.com/Adiixyz)
