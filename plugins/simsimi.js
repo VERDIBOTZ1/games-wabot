@@ -1,14 +1,20 @@
 let fetch = require('node-fetch')
-let handler = async (m, { text }) => {
-  if (!text) throw 'Textnya apa?'
-  let res = await fetch(global.API('bg', '/simi', { pesan: text }))
-  let json = await res.json()
-  if (json.status !== true) throw json
-  m.reply(json.result.jawab)
+
+let handler = m => m
+
+handler.before = async (m) => {
+    let chat = db.data.chats[m.chat]
+    if (chat.simi && !chat.isBanned) {
+        if (/^.*false|disable|(turn)?off|0/i.test(m.text)) return
+        if (!m.text) return
+        let res = await fetch(API('xteam', '/simsimi', { kata: encodeURIComponent(m.text) }, 'APIKEY'))
+        if (!res.ok) return m.reply(`${res.status} ${res.statusText}`)
+        let json = await res.json()
+        if (!json.status) return m.reply(require('util').format(json))
+        m.reply('Simi: ' + json.jawaban)
+        return !0
+    }
+    return !0
 }
-handler.help = ['simi', 'simsimi', 'simih'].map(v => v + ' [teks]')
-handler.tags = ['fun']
-handler.command = /^((sim)?simi|simih)$/i
 
 module.exports = handler
-
